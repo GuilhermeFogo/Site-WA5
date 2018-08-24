@@ -1,0 +1,64 @@
+.center{
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+.branco{
+	color:#FFFFFF;
+	width: 50px;
+	height: 100px
+}
+
+.linha{
+	width: 100%;
+	height: 1px;
+	color: #FFFFFF;
+	background: #FFFFFF;
+}
+a{
+	color: #FFFFFF;
+}
+a:hover{
+	color: #FFFFFF
+}
+
+.branco1{
+	color: #FFFFFF;
+}
+.row1{
+	margin-top: 15px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.float{
+	float: right;
+}
+.cinza{
+	background: #CECECE;
+}
+
+.espaco{
+	margin-left: 15px;
+}
+.azul{
+	color: #0000FF;
+}
+.azul_dark{
+	background: #003399;
+}
+
+.cresce{
+	margin-top: 15px;
+	padding: 30px;
+}
+.borda{
+border-color: #FFFFFF;
+border-style: solid;
+padding: 2px;	
+}
+
+.espaco2{
+	margin-right: 25px;
+}

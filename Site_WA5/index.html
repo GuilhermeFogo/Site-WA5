@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Site teste WA5</title>
+	<meta charset="utf-8">
+	<meta name="description" content="WA5">
+	<meta http-equiv="refresh" content="120">
+	<meta name="auhor" content="Guilherme Fogo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bostrap 4 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- FontAnsome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<!-- Js -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!-- Vue.js -->
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/meu_vue.js"></script>
+
+	<!-- recapcha -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	
+</head>
+<div class="container-fluid bg-primary">
+	<ul class="list-inline center">
+		<li class="list-inline-item">
+			<h1>
+				<a href="index.html">
+					<i class="fas fa-home fa-2x"></i>
+				</a>
+			</h1>
+		</li>
+		<li class="list-inline-item">
+			<a href="index.html" class="branco">Home</a>
+		</li>
+		<li class="list-inline-item">
+			<a href="#" class="branco">Quem Somos</a>
+		</li>
+		<li class="list-inline-item">
+			<a href=# class="branco">Tratamentos</a>
+		</li>
+		<li class="list-inline-item">
+			<a href=# class="branco">Cirurgia</a>
+		</li>
+		<li class="list-inline-item">
+			<a href=# class="branco">Contatos</a>
+		</li>
+		<li class="list-inline-item">
+			<a href="#" class="branco1 borda">Agendamento Online</a>
+		</li>
+	</ul>
+</div>
+<div class="linha"></div>
+<header class="container-fluid bg-primary">
+	<div class="container branco1">
+		<h2 class="">Agendamento Online</h2>
+		<div id="app"></div>
+	</div>
+</header>
+<body>
+	<article class="container">
+		<div class="row">
+			<section class="col-6">
+				<legend>Formulário de Agendamento</legend>
+				<form action="#" method="post">
+					<div class="form-group row">
+						<label><i class="fas fa-user"></i></label>
+						<div class="col-6">
+							<input type="text" name="campo_nome" class="form-control cinza" placeholder="Nome:" required="on">
+						</div>
+					</div>
+					<div class="form-inline">
+							<div class="row">
+  						<label><i class="fas fa-envelope"></i></label>
+						  <div class="col-6">
+						    <input class="form-control cinza" type="email" placeholder="E-mail" >
+						  </div>
+
+						  <label><i class="fas fa-phone"></i></label>
+						  <div class="col-5">
+						  	<input type="number" name="campo_tel" required="on" placeholder="telefone" class="form-control cinza">
+						  </div>
+
+						</div> <!-- row -->
+					</div> <!-- form-inline -->
+					<div class="row row1">
+						<label><i class="far fa-calendar-alt fa-3x"></i></label>
+						<h3>Dia de Preferência</h3>	
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<input type="date" name="calendario" class="form-control cinza" required="on">
+							<label id="data">dd/mm/aaaa</label>
+						</div>
+					</div>
+					<div class="form-check">
+    					<label class="form-check-label">
+					      	<input type="checkbox" class="form-check-input">
+					      1ª vez na Exemplo
+					    </label>
+					</div>
+
+					    <div class="row">
+					    	<label><i class="fas fa-newspaper fa-3x"></i></label>
+					    	<h3>Seu tipo de Consulta</h3>
+					    </div>
+					    <!-- grupo_raio -->
+					    <div class="form-group row">
+					    	<div class="col-4">
+					    		<div class="form-check">
+					    		<label class="form-check-label">
+					    			<input type="radio" name="tem_convenio" required="on" class="form-check-input">
+					    			Particular
+					    		</label>
+					    	</div>
+					    	</div>
+					    		<div class="col-6">
+					    			<div class="form-check">
+					    			<label class="form-check-label">
+					    				<input type="radio" name="tem_convenio" required="on" class="form-check-input">
+					    				Convênio
+					    			</label>
+					    		</div>
+					    	</div>
+					    </div><!-- grupo_radio -->
+
+					    <div class="form-inline row">
+					    	<div class="col-6">
+					    		<input type="text" name="campo_convenio" required="on" placeholder="Qual?" class="form-control cinza">
+					    	</div>
+					    	<div class="col-6">
+					    		<input type="text" name="campo_plano" required="on" placeholder="Plano" class="form-control cinza">
+					    	</div>
+					    </div>
+
+					    <div class="row1">
+					    	<textarea rows="5" class="form-control cinza" placeholder="Outras Informações"></textarea>
+					    </div>
+					    <div class="row1">
+					    	<div class="g-recaptcha" data-sitekey="6Lco2GsUAAAAAIWQgjP7DBCF_iDvOKtMXkbfuLZu"></div>
+					    </div>
+					    <div class="col-12">
+					    	<input type="submit" name="envio" class="btn btn-primary row1 float" value="Enviar">
+					    </div>
+				</form>
+			</section>
+			<section class="col-6">
+				<div class="col-md">
+					<div class="card cinza row1">
+						<div class="card-header h2">
+							Contatos
+						</div>
+						<div class="card-body">
+							<p class="h6" id="conteudo"></p>
+							<ul class="list-unstyled">
+								<li class="row espaco">
+									<i class="fas fa-phone-volume fa-3x"></i>
+									<div class="col-8">
+										<i class="azul espaco row1">Telefone:</i>
+										<div class="col-12 espaco2">
+											<i class="h5">11</i>
+										<i class="h4 telefone"></i>
+										</div>
+									</div>
+								</li>
+								<li class="row espaco row1">
+									<i class="far fa-envelope fa-3x"></i>
+									<div class="col-6">
+										<i class="azul">Email:</i>
+										<i class="h5 email"></i>
+									</div>
+								</li>
+								<li class="row espaco row1">
+									<i class="fas fa-map-marker-alt fa-3x"></i>
+									<div class="col-6 espaco">
+										<i class="azul">Onde nos Encontar:</i>
+										<i class="h6 endereco"></i>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</article>
+</body>
+<footer class="container-fluid azul_dark cresce">
+	<div class="row">
+		<div class="col-6">
+			<form class="form-inline" method="post" action="#">
+				<div class="form-group mb-3">
+					<div class="col-12">
+						<input type="email" name="campo_enviar_email" class="form-control" placeholder="Envie seu Email" required="on">
+						<a href="#"><i class="far fa-share-square fa-2x"></i></a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-6">
+			<nav class="center">
+				<ul class="list-inline">
+					<li class="list-inline-item">
+						<a href="#" class="branco"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li class="list-inline-item">
+						<a href="#" class="branco"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li class="list-inline-item">
+						<a href="#" class="branco"><i class="fab fa-linkedin-in"></i></a>
+					</li>
+					<li class="list-inline-item">
+						<a href="#" class="branco"><i class="fab fa-google-plus-g"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="linha"></div>
+	<div class="container-fluid azul_dark">
+		<div class="row branco1">
+			<div class="col-3 center">
+			<i class="fas fa-home fa-3x"></i>
+		</div>
+		<div class="col-3">
+			<ul class="list-unstyled">
+				<li class="h5">Sobre</li>
+				<li>
+					<a href="">Exemplo</a>
+				</li>
+				<li>
+					<a href="">Blog</a>
+				</li>
+				<li>
+					<a href="">Loguin</a>
+				</li>
+				<li>
+					<a href="">Loguin</a>
+				</li>
+				<li>
+					<a href="">Registro</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-3">
+			<ul class="list-unstyled">
+				<li class="h5">Links Úteis</li>
+				<li>
+					<a href="">Doutores</a>
+				</li>
+				<li>
+					<a href="">Clinicas</a>
+				</li>
+				<li>
+					<a href="">Especializações</a>
+				</li>
+				<li>
+					<a href="">Junte-se Como Medico</a>
+				</li>
+				<li>
+					<a href="">Download App</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-3">
+			<ul class="list-unstyled">
+				<li class="h5">Entre em contato conosco</li>
+				<li>
+					<i class="fas fa-phone-volume"></i>
+					<i class="telefone1"></i>
+				</li>
+				<li>
+					<i class="fas fa-phone-volume"></i>
+					<i class="telefone2"></i>
+				</li>
+				<li>
+					<i class="far fa-envelope"></i>
+					<i class="email"></i>
+				</li>
+				<li>
+					<i class="fa fa-map-marker-alt"></i>
+					<i class="endereco"></i>
+				</li>
+			</ul>
+		</div>
+		</div> <!-- row do container -->
+
+		<div class="container">
+			<div class="linha"></div>
+			<div class="float branco1">
+				<p class="h6">2018 Exemplo Todos os direitos reservados</p>
+			</div>
+		</div>
+</footer>
+</html>
